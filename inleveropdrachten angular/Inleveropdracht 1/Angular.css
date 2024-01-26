@@ -1,0 +1,32 @@
+table {
+  font-size: 14px;
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+   width: 50%;}
+
+
+td,th {
+
+   border: 1px solid black;
+   text-align: left;}
+
+tr:nth-child(even) {
+   background-color: #dddddd;}
+
+
+
+.box2{
+  margin-left: 2%;
+}
+
+body{
+  background-color: lightgray;
+}
+
+input:not(:placeholder-shown) {
+  border-color: hsl(1, 86%, 50%);
+}
+
+input:valid {
+  border-color: hsl(120, 76%, 50%);
+}

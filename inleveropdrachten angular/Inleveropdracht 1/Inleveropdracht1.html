@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Angular.css">
+    <title></title>
+  </head>
+  <body>
+<div ng-app="">
+  <form name="myForm">
+  <p>Name:
+    <input style="margin-left: 10%" type="text" required pattern="\S+"/ name="myName" ng-model="Myname1" required>
+      <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">Naam moet ingevuld worden!.</span>
+    </p>
+  </form>
+  <form name="myForm2">
+    <p>Achternaam:
+      <input style="margin-left: 7.1%" type="text" required pattern="\S+"/ name="mylastName" ng-model="Mylastname1" required>
+      <span ng-show="myForm2.mylastName.$touched && myForm2.mylastName.$invalid">Achternaam moet ingevuld worden!.</span>
+    </p>
+  </form>
+  <form name="myForm3">
+    <p>Adres:
+      <input style="margin-left: 9.9%" type="text" required pattern="\S+"/ name="Adres" ng-model="Adres1" required>
+      <span ng-show="myForm3.Adres.$touched && myForm3.Adres.$invalid">Adres moet ingevuld worden!.</span>
+    </p>
+  </form>
+  <form name="myForm4">
+    <p>Huisnummer:
+      <input style="margin-left: 6.6%" type="text" required pattern="\S+"/ name="Huisnummer" ng-model="Huisnummer" required>
+      <span ng-show="myForm4.Huisnummer.$touched && myForm4.Huisnummer.$invalid">Huisnummer moet ingevuld worden!.</span>
+    </p>
+  </form>
+  <form name="myForm5">
+    <p>Postcode:
+      <input style="margin-left: 8.6%" type="text" required pattern="\S+"/ name="Postcode" ng-model="Postcode" required>
+      <span ng-show="myForm5.Postcode.$touched && myForm5.Postcode.$invalid">Postcode moet ingevuld worden!.</span>
+    </p>
+  </form>
+  <form name="myForm6">
+    <p>Woonplaats:
+      <input style="margin-left: 7.2%" type="text" required pattern="\S+"/ name="Woonplaats" ng-model="Woonplaats1" required>
+      <span ng-show="myForm6.Woonplaats.$touched && myForm6.Woonplaats.$invalid">Woonplaats moet ingevuld worden!.</span>
+    </p>
+  </form>
+  <form name="myForm7">
+    <p>Emailadres:
+      <input style="margin-left: 7.5%" type="text" required pattern="\S+"/ name="Emailadres" ng-model="Emailadres" required>
+      <span ng-show="myForm7.Emailadres.$touched && myForm7.Emailadres.$invalid">Emailadres moet ingevuld worden!.</span>
+    </p>
+  </form>
+<body>
+  <div class="box2">
+    <h2>Gegevens controle</h2>
+    <table>
+      <tr>
+        <th>Naam</th>
+      </tr>
+      <tr>
+        <td><p >{{Myname1}}</p></td>
+      </tr>
+      <th>achternaam</th>
+      <tr>
+        <td><p ng-bind="Mylastname1"></p></td>
+      </tr>
+      <th>Adres</th>
+      <tr>
+        <td><p ng-bind="Adres1"></p></td>
+      </tr>
+      <th>Huisnummer</th>
+      <tr>
+        <td><p ng-bind="Huisnummer"></p></td>
+      </tr>
+      <th>Postcode</th>
+      <tr>
+        <td><p ng-bind="Postcode"></p></td>
+      </tr>
+      <th>Woonplaats</th>
+      <tr>
+        <td><p ng-bind="Woonplaats1"></p></td>
+      </tr>
+       <th>Emailadres</th>
+       <tr>
+         <td><p ng-bind="Emailadres"></p></td>
+       </tr>
+     </table>
+     </div>
+   </div>
+ </div>
+</body>
+</html>

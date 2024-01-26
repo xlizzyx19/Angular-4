@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="Angular.css">
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myCtrl">
+    <table>
+      <thead>
+      <tr>
+        <th ng-click="sortData('merk')">merk <div ng-class="getSortClass('merk')"></div></th>
+        <th ng-click="sortData('kleur')">kleur <div ng-class="getSortClass('kleur')"></div></th>
+        <th ng-click="sortData('kenteken')">kenteken <div ng-class="getSortClass('kenteken')"></div></th>
+        <th ng-click="sortData('brandstof')">brandstof <div ng-class="getSortClass('brandstof')"></div></th>
+        <th ng-click="sortData('deuren')">deuren <div ng-class="getSortClass('deuren')"></div></th>
+        <th ng-click="sortData('prijs')">prijs<div ng-class="getSortClass('prijs')"></div></th>
+      </tr>
+    </thead>
+  </div>
+      <tr ng-repeat="car in cars | orderBy:sortColumn:reverseSort">
+        <td>{{car.merk}}</td>
+        <td>{{car.kleur}}</td>
+        <td>{{car.kenteken}}</td>
+        <td>{{car.brandstof}}</td>
+        <td>{{car.deuren}}</td>
+        <td>{{car.prijs}}</td>
+      </tr>
+    </table>
+
+    <script type="text/javascript" src="./inleveropdrachtB_script.js"></script>
+  </body>
+</html>

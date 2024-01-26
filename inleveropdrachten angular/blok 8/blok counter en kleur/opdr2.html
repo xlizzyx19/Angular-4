@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="opdr2.css">
+    <title></title>
+  </head>
+  <body>
+    <div ng-app="myApp" ng-controller="myCtrl" class="container">
+    <div id="red" ng-mouseover ="showcolor($event)" ng-mouseleave = "hidecolor($event)" ng-click="count = count + 1" ng-init="count=0">count: {{count}}</div>
+    <div id="blue" ng-mouseover ="showcolor($event)" ng-mouseleave = "hidecolor($event)" ng-click="count2 = count2 + 1" ng-init="count2=0">count: {{count2}}</div>
+    <div id="green" ng-mouseover ="showcolor($event)" ng-mouseleave = "hidecolor($event)" ng-click="count3 = count3 + 1" ng-init="count3=0">count: {{count3}}</div>
+    <input type="checkbox" ng-model ="show">
+    <label for="color">kleur laten zien</label><br>
+
+
+
+    <!-- <input type="text" ng-model ="kleur"> -->
+    <h1 ng-bind="kleur"></h1>
+  </div>
+  <script type="text/javascript">
+    var app = angular.module('myApp',[]);
+    app.controller('myCtrl', function($scope){
+      $scope.showcolor = function(ev){
+        if ($scope.show) {
+          $scope.kleur = ev.target.id;
+        }
+      };
+      $scope.hidecolor = function(ev){
+        $scope.kleur = "";
+      };
+    } );
+  </script>
+  </body>
+</html>
